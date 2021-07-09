@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import "./style.css";
- import { useFormik } from 'formik';
- import * as Yup from 'yup';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
  
  const SignupForm = () => {
    const formik = useFormik({
