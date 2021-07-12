@@ -6,9 +6,9 @@ Is yup really necessary? Is the length of code only advantage here?
 
 {...formik.getFieldProps('firstName')}
 
-# at very begining, the error message won't show "15 or less" error message unless you tab to next. Should this not be a default behavior
+# at very begining, the error message won't show "15 or less" error message unless you tab to next. Should this not be a default behavior?
 
 # <form noValidate="true"> will disable default HTML validation message to appear.
 
-
+<texarea rows="3">
 
