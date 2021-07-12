@@ -30,6 +30,7 @@ import * as Yup from 'yup';
        <input
          id="firstName"
          type="text"
+         placeholder ="Joe"
          {...formik.getFieldProps('firstName')}
        />
        {formik.touched.firstName && formik.errors.firstName ? (
@@ -37,13 +38,13 @@ import * as Yup from 'yup';
        ) : null}
  
        <label htmlFor="lastName">Last Name</label>
-       <input id="lastName" type="text" {...formik.getFieldProps('lastName')} />
+       <input id="lastName" type="text" placeholder ="Doe" {...formik.getFieldProps('lastName')} />
        {formik.touched.lastName && formik.errors.lastName ? (
          <div>{formik.errors.lastName}</div>
        ) : null}
  
        <label htmlFor="email">Email Address</label>
-       <input id="email" type="email" {...formik.getFieldProps('email')} />
+       <input id="email" type="email" placeholder ="joedoe@whatever.com" {...formik.getFieldProps('email')} />
        {formik.touched.email && formik.errors.email ? (
          <div>{formik.errors.email}</div>
        ) : null}
