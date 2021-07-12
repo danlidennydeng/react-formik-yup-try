@@ -10,6 +10,7 @@ import * as Yup from 'yup';
        firstName: '',
        lastName: '',
        email: '',
+       intro: '',
      },
      validationSchema: Yup.object({
        firstName: Yup.string()
@@ -19,6 +20,9 @@ import * as Yup from 'yup';
          .max(20, 'Must be 20 characters or less')
          .required('Required'),
        email: Yup.string().email('Invalid email address').required('Required'),
+       intro: Yup.string()
+         .min(20, 'Must be 20 characters or more')
+         .required('Required'),
      }),
      onSubmit: values => {
        alert(JSON.stringify(values, null, 2));
@@ -49,6 +53,11 @@ import * as Yup from 'yup';
          <div>{formik.errors.email}</div>
        ) : null}
  
+      <label htmlFor="intro">Self Intro</label>
+       <textarea id="intro" type="text" rows="3" placeholder ="write..." {...formik.getFieldProps('intro')} />
+       {formik.touched.intro && formik.errors.intro ? (
+         <div>{formik.errors.intro}</div>
+       ) : null}
        <button type="submit">Submit</button>
      </form>
    );
