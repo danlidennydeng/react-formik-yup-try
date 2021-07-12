@@ -25,7 +25,7 @@ import * as Yup from 'yup';
      },
    });
    return (
-     <form onSubmit={formik.handleSubmit}>
+     <form noValidate="true" onSubmit={formik.handleSubmit}>
        <label htmlFor="firstName">First Name</label>
        <input
          id="firstName"
